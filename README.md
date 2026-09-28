@@ -5,4 +5,4 @@ Downloads and the update feed for ClearMac, a native Mac storage assistant. The 
 - **Downloads:** notarized DMGs are attached to each [release](https://github.com/ajay-develops/clearmac-releases/releases).
 - **Update feed:** ClearMac checks `appcast.xml`, served at `https://ajay-develops.github.io/clearmac-releases/appcast.xml`. Every update is signed with ClearMac's EdDSA key, and the app refuses an update whose signature doesn't match.
 
-When ClearMac checks for updates, the only things it sends are the app version and the macOS version.
+When ClearMac checks for updates, the request carries only its version (and the version of Sparkle, the update framework). No system profile, account or file information is sent.
